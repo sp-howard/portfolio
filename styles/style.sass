@@ -1,0 +1,135 @@
+body
+  font-family: 'Open Sans', sans-serif
+  background-color: #F7F6F2
+  color: #303030
+  h1
+    font-family: 'Ubuntu', sans-serif
+    font-size: 4em
+    text-shadow: 2px 2px 8px black
+    -webkit-text-stroke: 2px #333
+  h3
+    font-family: 'Ubuntu', sans-serif
+    text-shadow: 2px 2px 8px black
+    font-size: 1.6em
+    font-weight: lighter
+
+
+
+.header
+  height: 500px
+  background-image: url("/images/circuit-hero.png")
+  background-repeat: no-repeat
+  background-position: center
+  color: white
+  border-bottom: 3px solid black
+  
+
+  .flex-container-head
+    display: flex
+    margin-left: 10%
+    margin-right: 10%
+    height: 100%
+    flex-direction: column
+    align-content: space-between
+
+    .masthead
+      display: flex
+      flex-flow: column
+      justify-content: center
+      align-items: center
+      flex-grow: 1
+
+      h1
+        margin-bottom: -5px
+        margin-top: 0
+      h4
+        font-family: 'Ubuntu', sans-serif
+        font-size: 3.5em
+        color: black
+        -webkit-text-stroke: 2px white
+        text-shadow: 0px 0px 10px black
+        margin: 0
+
+    .nav
+      display: flex
+      margin: 0 25% 0 25%
+      align-items: center
+      justify-content: center
+      ul
+        list-style: none
+        display: flex
+        width: 100%
+        padding: 0
+        align-items: center
+        justify-content: space-around
+        li
+          color: red
+          font-family: 'Ubuntu', sans-serif
+          font-weight: bold
+          a
+            text-decoration: none
+            color: #E5E5DF
+            &:hover
+              color: #ADADA8
+
+.content-container
+  display: flex
+  margin: 0 auto
+  max-width: 1200px
+  height: 100%
+  flex-direction: column
+
+.section-name
+  padding: 10px
+  color: #888
+
+.about
+  display: flex
+  flex-flow: row
+  height: 300px
+  margin-top: 30px
+
+
+  .about-pic
+    margin: 30px
+    img
+      border-radius: 100%
+
+  .vertical-content-container
+    display: flex
+    flex-flow: column
+
+    .about-headline
+      margin: 40px 0 10px 0
+      font-size: 1.5em
+
+    .about-technologies
+      margin-top: 20px
+      display: flex
+      flex-flow: column
+      align-items: center
+      ul
+        list-style: none
+        display: flex
+        width: 100%
+        align-items: center
+        justify-content: space-around
+        li
+          display: flex
+          flex-flow: column
+          align-items: center
+          justify-content: center
+          color: #888
+          font-size: .9em
+          i
+            padding: 8px
+
+.fa-html5
+  color: #E44D26
+  &:hover
+    color: #F16529
+
+.fa-css3
+  color: #0170BA
+  &:hover
+    color: #29A9DF
