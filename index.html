@@ -1,3 +1,14 @@
+<!--
+Features to Implement
+
+  Nav Bar links scroll to section
+  Parallax of title
+
+  Create blog
+  Blog post
+
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,111 +17,220 @@
     <title>Steven Howard</title>
     <link rel="stylesheet" href="./styles/normalize.css" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" href="./styles/style.css" media="screen" title="no title" charset="utf-8">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Ubuntu" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Lato:300" rel="stylesheet">
 </head>
 
 <body>
 
-  <div class="header">
-    
-      <div class="flex-container-head">
-          <div class="masthead">
-              <h4>SH</h4>
-              <h1>Steven Howard</h1>
-              <h3>Web Developement & Design</h3>
-          </div>
-          <div class="nav">
-              <ul>
-                  <li><a href="">About</a></li>
-                  <li><a href="">Projects</a></li>
-                  <li><a href="">Blog</a></li>
-                  <li><a href="">Contact</a></li>
-              </ul>
-          </div>
-      </div>
-  </div>
+    <div class="header">
+
+        <div class="flex-container-head">
+            <div class="masthead">
+                <div class="logo-border">
+                    <h4>SH</h4>
+                </div>
+                <h1>Steven Howard</h1>
+                <h3>Web Development & Design</h3>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
 
     <div class="content-container">
 
-        <div class="about">
+        <div class="about" id="about">
 
             <div class="section-name">
                 About
             </div>
 
             <div class="about-pic">
-              <img src="https://placehold.it/150x150" alt="" />
+                <img src="https://placehold.it/200x200" alt="" />
             </div>
             <div class="vertical-content-container">
-              <div class="about-headline">Hi! I'm Steven</div>
+                <div class="about-headline">Hi! I'm Steven.</div>
 
-              <div class="about-bio">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt odit maxime culpa magnam, quidem atque, est at perferendis dolores veritatis, nisi voluptatem. Sed voluptates dolorum, excepturi laborum, asperiores odit molestiae?</div>
+                <div class="about-bio">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt odit maxime culpa magnam, quidem atque, est at perferendis dolores veritatis, nisi voluptatem. Sed voluptates dolorum, excepturi laborum, asperiores odit molestiae?</div>
 
-              <div class="about-technologies">
-                <div>Expertise</div>
-                  <ul>
-                      <li>
-                        <i class="fa fa-html5 fa-2x" aria-hidden="true"></i>
-                        HTML
-                      </li>
-                      <li>
-                        <i class="fa fa-css3 fa-2x" aria-hidden="true"></i>
-                        CSS
-                      </li>
-                  </ul>
-              </div>
+
             </div>
         </div>
-        <div class="projects">
+        <div class="projects" id="projects">
             <div class="section-name">
                 Projects
             </div>
             <div class="vertical-content-container">
-              <div class="project-container">
-                  <div class="project-thumbnail">
-                    <img src="https://placehold.it/250x150" alt="" />
-                  </div>
-                  <div class="project-title">
-                      Project 1
-                  </div>
-                  <div class="project-summary">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt laborum animi debitis, consectetur reprehenderit eius minima! Voluptas praesentium, ducimus! Soluta omnis officiis adipisci consectetur deserunt nesciunt aperiam ex possimus eaque!
-                  </div>
-                  <div class="project-tech"></div>
-              </div>
-              <div class="project-container">
-                  <div class="project-thumbnail">
-                    <img src="https://placehold.it/250x150" alt="" />
-                  </div>
-                  <div class="project-title">
-                      Project 2
-                  </div>
-                  <div class="project-summary">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem praesentium illum nisi dolores incidunt ipsum consequatur dolor temporibus labore, cumque fuga, ea iure laudantium, voluptatibus necessitatibus ratione totam. Modi, odit.
-                  </div>
-                  <div class="project-tech"></div>
-              </div>
-            </div>
+                <div class="project-container">
+                    <div class="project-thumbnail">
+                        <div class="project-overlay">
+                          <div><a href="http://sp-howard.github.io">View Project</a></div>
+                          <hr>
+                          <div><a href="https://github.com/sp-howard/googlesearch_russellwilson">Github</a></div>
+                        </div>
 
+                            <img src="./images/wilson.png" alt="" />
+
+                    </div>
+                    <div class="project-description-block">
+                        <div class="project-title">
+                            Google Search Mock-Up
+                        </div>
+                        <div class="project-summary">
+                            A student project that taught me some advanced CSS techniques, as well as wireframing an implementing a layout in HTML.
+                        </div>
+                        <div class="project-tech">
+                            <ul>
+                                <li>
+                                    HTML
+                                </li>
+                                <li>
+                                    CSS
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-container project-offset">
+                    <div class="project-thumbnail">
+                      <div class="project-overlay">
+                        <div><a href="">View Project</a></div>
+                        <hr>
+                        <div><a href="https://github.com/sp-howard">Github</a></div>
+                      </div>
+                      <div class="coming-soon">
+                        Coming Soon
+                      </div>
+                    </div>
+                    <div class="project-description-block">
+                        <div class="project-title">
+                            Coming Soon
+                        </div>
+                        <div class="project-summary">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem praesentium illum nisi dolores incidunt ipsum consequatur dolor temporibus labore, cumque fuga, ea iure laudantium, voluptatibus necessitatibus ratione totam. Modi, odit.
+                        </div>
+                        <div class="project-tech">
+                            <ul>
+                                <li>
+                                    HTML
+                                </li>
+                                <li>
+                                    CSS
+                                </li>
+                                <li>
+                                    Bootstrap
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-container">
+                    <div class="project-thumbnail">
+                      <div class="project-overlay">
+                        <div><a href="">View Project</a></div>
+                        <hr>
+                        <div><a href="https://github.com/sp-howard">Github</a></div>
+                      </div>
+                        <div class="coming-soon">
+                          Coming Soon
+                        </div>
+                    </div>
+                    <div class="project-description-block">
+                        <div class="project-title">
+                            Coming Soon
+                        </div>
+                        <div class="project-summary">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt laborum animi debitis, consectetur reprehenderit eius minima! Voluptas praesentium, ducimus! Soluta omnis officiis adipisci consectetur deserunt nesciunt aperiam ex possimus eaque!
+                        </div>
+                        <div class="project-tech">
+
+                            <ul>
+                                <li>
+                                    HTML
+                                </li>
+                                <li>
+                                    CSS
+                                </li>
+                                <li>
+                                    Javascript
+                                </li>
+                                <li>
+                                    PHP
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="section blog">
+        <div class="blog" id="blog">
             <div class="section-name">
                 Blog
             </div>
-            <div class="blog-name">Blog Name</div>
-            <div class="blog-summary"></div>
+            <div class="blog-container">
+                <div class="blog-image">
+                    <img src="https://placehold.it/150x150" alt="" />
+                </div>
+                <div class="blog-name">Blog Name</div>
+                <div class="blog-summary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates expedita, molestiae labore tenetur iusto velit beatae? Obcaecati dolorem explicabo sit? Necessitatibus commodi quas, cupiditate eligendi culpa earum architecto accusamus
+                    quod.</div>
+            </div>
         </div>
-        <div class="section contact">
+        <div class="contact" id="contact">
             <div class="section-name">
                 Contact
+            </div>
+            <div class="contact-container">
+                <div class="contact-overlay">
+                  <div class="contact-modal">
+                    <form method="post" action="contactengine.php">
+                      <label for="Name">Name:</label>
+                      <input type="text" name="Name" id="Name" />
+                      <label for="Email">Email:</label>
+                      <input type="text" name="Email" id="Email" />
+
+                      <label for="Message">Message:</label><br />
+                      <textarea name="Message" rows="10" cols="20" id="Message"></textarea>
+
+                      <input type="submit" name="submit" value="Submit" class="submit-button" />
+                    </form>
+                  </div>
+                </div>
+
+                <h3>Contact Me!</h3>
+
+                <i class="fa fa-envelope-o fa-5x" aria-hidden="true"></i>
+
+                <div>
+                    ...or look me up on...
+                </div>
+                <div class="social-icons">
+                    <div class="circle-border">
+                        <a href=""><i class="fa fa-github-alt fa-2x" aria-hidden="true"></i></a>
+                    </div>
+                    <div class="circle-border">
+                        <a href=""><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+                    </div>
+                </div>
             </div>
         </div>
 
     </div>
     <div class="footer">
-
+        <div>
+            Steven Howard 2016
+        </div>
     </div>
     <script src="https://use.fontawesome.com/35622f8e72.js"></script>
+    <script src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous"></script>
+    <script src="./scripts/script.js"></script>
+
 </body>
 
 </html>
