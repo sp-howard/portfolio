@@ -23,7 +23,6 @@ Features to Implement
 <body>
 
     <div class="header">
-
         <div class="flex-container-head">
             <div class="masthead">
                 <div class="logo-border">
@@ -42,24 +41,17 @@ Features to Implement
             </nav>
         </div>
     </div>
-
     <div class="content-container">
-
         <div class="about" id="about">
-
             <div class="section-name">
                 About
             </div>
-
             <div class="about-pic">
-                <img src="https://placehold.it/200x200" alt="" />
+                <img src="../images/profile.jpg" alt="Me baby, me" />
             </div>
             <div class="vertical-content-container">
                 <div class="about-headline">Hi! I'm Steven.</div>
-
                 <div class="about-bio">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt odit maxime culpa magnam, quidem atque, est at perferendis dolores veritatis, nisi voluptatem. Sed voluptates dolorum, excepturi laborum, asperiores odit molestiae?</div>
-
-
             </div>
         </div>
         <div class="projects" id="projects">
@@ -70,18 +62,16 @@ Features to Implement
                 <div class="project-container">
                     <div class="project-thumbnail">
                         <div class="project-overlay">
-                          <div><a href="http://sp-howard.github.io">View Project</a></div>
-                          <hr>
-                          <div><a href="https://github.com/sp-howard/googlesearch_russellwilson">Github</a></div>
+                            <div><a href="http://sp-howard.github.io">View Project</a></div>
+                            <hr>
+                            <div><a href="https://github.com/sp-howard/googlesearch_russellwilson">Github</a></div>
                         </div>
-
-                            <img src="./images/wilson.png" alt="" />
-
+                        <img src="./images/wilson.png" alt="" />
                     </div>
                     <div class="project-description-block">
-                        <div class="project-title">
+                        <h3 class="project-title">
                             Google Search Mock-Up
-                        </div>
+                        </h3>
                         <div class="project-summary">
                             A student project that taught me some advanced CSS techniques, as well as wireframing an implementing a layout in HTML.
                         </div>
@@ -99,19 +89,19 @@ Features to Implement
                 </div>
                 <div class="project-container project-offset">
                     <div class="project-thumbnail">
-                      <div class="project-overlay">
-                        <div><a href="">View Project</a></div>
-                        <hr>
-                        <div><a href="https://github.com/sp-howard">Github</a></div>
-                      </div>
-                      <div class="coming-soon">
-                        Coming Soon
-                      </div>
-                    </div>
-                    <div class="project-description-block">
-                        <div class="project-title">
+                        <div class="project-overlay">
+                            <div><a href="">View Project</a></div>
+                            <hr>
+                            <div><a href="https://github.com/sp-howard">Github</a></div>
+                        </div>
+                        <div class="coming-soon">
                             Coming Soon
                         </div>
+                    </div>
+                    <div class="project-description-block">
+                        <h3 class="project-title">
+                            Coming Soon
+                        </h3>
                         <div class="project-summary">
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem praesentium illum nisi dolores incidunt ipsum consequatur dolor temporibus labore, cumque fuga, ea iure laudantium, voluptatibus necessitatibus ratione totam. Modi, odit.
                         </div>
@@ -132,24 +122,23 @@ Features to Implement
                 </div>
                 <div class="project-container">
                     <div class="project-thumbnail">
-                      <div class="project-overlay">
-                        <div><a href="">View Project</a></div>
-                        <hr>
-                        <div><a href="https://github.com/sp-howard">Github</a></div>
-                      </div>
+                        <div class="project-overlay">
+                            <div><a href="">View Project</a></div>
+                            <hr>
+                            <div><a href="https://github.com/sp-howard">Github</a></div>
+                        </div>
                         <div class="coming-soon">
-                          Coming Soon
+                            Coming Soon
                         </div>
                     </div>
                     <div class="project-description-block">
-                        <div class="project-title">
+                        <h3 class="project-title">
                             Coming Soon
-                        </div>
+                        </h3>
                         <div class="project-summary">
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt laborum animi debitis, consectetur reprehenderit eius minima! Voluptas praesentium, ducimus! Soluta omnis officiis adipisci consectetur deserunt nesciunt aperiam ex possimus eaque!
                         </div>
                         <div class="project-tech">
-
                             <ul>
                                 <li>
                                     HTML
@@ -174,12 +163,17 @@ Features to Implement
                 Blog
             </div>
             <div class="blog-container">
-                <div class="blog-image">
-                    <img src="https://placehold.it/150x150" alt="" />
+                <div class="blog-summary">
+                    I write about my journey from correctional healthcare worker to web developer. I give insight into my learning process, resources I use, and the struggles that come with a career change.
                 </div>
-                <div class="blog-name">Blog Name</div>
-                <div class="blog-summary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates expedita, molestiae labore tenetur iusto velit beatae? Obcaecati dolorem explicabo sit? Necessitatibus commodi quas, cupiditate eligendi culpa earum architecto accusamus
-                    quod.</div>
+                <div class="post-container">
+                    <div class="latest-post">Latest Post</div>
+                    <div class="post-headline">From Bars to Brackets</div>
+                    <div class="post-date">July 22, 2016</div>
+                    <div class="post-summary">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex tempora praesentium tenetur, eaque, quos eum nobis atque? Possimus ad delectus ut voluptate, corporis iste et excepturi architecto praesentium doloribus iure...
+                    </div>
+                </div>
             </div>
         </div>
         <div class="contact" id="contact">
@@ -189,44 +183,44 @@ Features to Implement
             <div class="contact-container">
                 <div class="contact-overlay">
                   <div class="contact-modal">
+
                     <form method="post" action="contactengine.php">
-                      <label for="Name">Name:</label>
-                      <input type="text" name="Name" id="Name" />
-                      <label for="Email">Email:</label>
-                      <input type="text" name="Email" id="Email" />
+                      <div class="close-btn"><i class="fa fa-times fa-lg" aria-hidden="true"></i></div>
+                      <div id="top-line">
+                        <input type="text" name="Name" id="Name" placeholder="Name"/>
 
-                      <label for="Message">Message:</label><br />
-                      <textarea name="Message" rows="10" cols="20" id="Message"></textarea>
-
-                      <input type="submit" name="submit" value="Submit" class="submit-button" />
+                        <input type="text" name="Email" id="Email" placeholder="Email"/>
+                      </div>
+                      <div id="bottom-line">
+                        <textarea name="Message" rows="10" cols="20" id="Message" placeholder="Message"></textarea>
+                      </div>
+                      <input type="submit" name="submit" value="Send" class="submit-button" />
                     </form>
                   </div>
                 </div>
 
-                <h3>Contact Me!</h3>
-
-                <i class="fa fa-envelope-o fa-5x" aria-hidden="true"></i>
-
-                <div>
-                    ...or look me up on...
+                <div class="contact-intro">
+                    Need a website? Want it hand coded by a lifelong student of all things web?
                 </div>
-                <div class="social-icons">
-                    <div class="circle-border">
-                        <a href=""><i class="fa fa-github-alt fa-2x" aria-hidden="true"></i></a>
-                    </div>
-                    <div class="circle-border">
-                        <a href=""><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
-                    </div>
+                <div class="email-container">
+                  <i class="fa fa-envelope-o fa-5x" aria-hidden="true"></i>
+                  <div class="email-me">Email Me </div>
                 </div>
             </div>
         </div>
 
     </div>
     <div class="footer">
-        <div>
-            Steven Howard 2016
-        </div>
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/sp-howard"><i class="fa fa-linkedin fa-2x" aria-hidden="true" id="linkedin"></i></a>
+        <a href="https://github.com/sp-howard"><i class="fa fa-github-alt fa-2x" aria-hidden="true" id="github"></i></a>
+        <a href="https://twitter.com/StevenP_Howard"><i class="fa fa-twitter fa-2x" aria-hidden="true" id="twitter"></i></a>
+      </div>
+      <div class="bottom-bar">
+        <div>Steven Howard 2016</div>
+      </div>
     </div>
+
     <script src="https://use.fontawesome.com/35622f8e72.js"></script>
     <script src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous"></script>
     <script src="./scripts/script.js"></script>

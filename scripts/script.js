@@ -22,3 +22,26 @@ $(document).ready(function(){
     } // End if
   });
 });
+
+$(function () {
+
+  $('.email-container').click(function(){
+    $('.contact-overlay').addClass('is-open');
+    return false;
+  });
+
+  $('.close-btn').click(function(){
+    $('.contact-overlay').removeClass('is-open');
+  });
+
+});
+
+$(window).scroll(function(){
+
+  var wScroll = $(this).scrollTop();
+
+  $('.masthead').css({
+    'transform' : 'translate(0px, '+ wScroll/22 +'%)'
+  });
+
+});

@@ -1,12 +1,24 @@
-$base-dark: #304352
-$base-light: #2C3C49
 
-$comp-light: #977F5F
-$comp-dark: #715D41
+// VARIABLES
+
+$base-dark: #304352
+$base-light: #465C6D
+
+$comp-light: #978369
+$comp-dark: #695A44
 
 $black: #333638
-$gray: #d7d2cc
-$white: #f8f8f9
+$gray: #D5E2EB
+$white: #F4F9FC
+
+//MIXINS
+
+@mixin heading($size: 1.25em, $spacing: 0.1em)
+  font-size: $size
+  font-weight: bold
+  color: $black
+  text-transform: uppercase
+  letter-spacing: $spacing
 
 @mixin transparent-bg($opacity)
   background-color: rgba(113, 93, 65, $opacity)
@@ -18,38 +30,48 @@ $white: #f8f8f9
 %bigger-font
   font-size: 1.1em
 
+@keyframes bounceIn
+  0%
+    transform: scale(0.3)
+
+  50%
+    transform: scale(1.1)
+
+  80%
+    transform: scale(0.89)
+
+  100%
+    transform: scale(1)
+
+//HEADER
+
 body
   background-color: $white
   color: $black
   font-family: 'Lato', sans-serif
+  font-weight: normal
 
 .header
   position: relative
-  height: 600px
-  background-image: url("/images/mountains-bw.jpg")
+  height: 650px
+  background-image: url("../images/mountains.jpg")
   background-repeat: no-repeat
-  background-size: 100% 600px
+  background-size: 100% 650px
   background-attachment: fixed
-
-  color: white
+  color: $white
   border-bottom: 2px solid $comp-dark
   font-family: "Josefin Sans",sans-serif
   font-weight: 100
   font-style: normal
   letter-spacing: 0.125em
   text-transform: uppercase
-
-
-
-
-
   .flex-container-head
     position: absolute
     top: 0
     bottom: 0
     left: 0
     right: 0
-    background: linear-gradient(transparentize($base-dark, .2), transparentize($black, .2))
+    background: linear-gradient(transparentize($base-light, .25), transparentize($black, .25))
     display: flex
     height: 100%
     flex-direction: column
@@ -62,6 +84,7 @@ body
       align-items: center
       align-content: space-between
       flex-grow: 1
+      z-index: 0
 
       .logo-border
         border: 2px solid $comp-light
@@ -96,12 +119,14 @@ body
         +transparent-bg(.1)
         margin-bottom: -5px
 
+// NAV
 
 nav
   display: flex
   margin: 0 25% 0 25%
   align-items: center
   justify-content: center
+  z-index: 99
 
   ul
     list-style: none
@@ -120,8 +145,8 @@ nav
         text-decoration: none
         color: $white
         padding-bottom: 5px
-        border-bottom: 1px solid rgba(113, 93, 65, 0)
-        transition: all 200ms
+        border-bottom: 3px solid rgba(113, 93, 65, 0)
+        transition: all 250ms
 
         &:hover
           color: $gray
@@ -134,6 +159,7 @@ nav
   height: 100%
   @extend %bigger-font
   flex-direction: column
+  z-index: 1
 
 .section-name
   margin-right: 10px
@@ -143,39 +169,48 @@ nav
   text-transform: uppercase
   letter-spacing: 0.1em
 
+// ABOUT
 
 .about
   display: flex
   flex-flow: row
   height: 300px
   margin-top: 60px
-
-
+  padding-top: 30px
 
   .about-pic
     margin: 0 30px 0 30px
+    box-shadow: 0px 5px 10px transparentize($black, .4)
+    border-radius: 100%
+    min-width: 250px
+    max-height: 250px
+    overflow: hidden
+
     img
-      border-radius: 100%
-      box-shadow: 0px 5px 10px transparentize($black, .4)
+      height: 250px
+      width: 250px
+
 
   .vertical-content-container
     display: flex
     flex-flow: column
 
-    .about-headline
-      font-size: 1.35em
-      letter-spacing: 0.1em
-      margin-top: 10px
-      margin-bottom: 20px
+.about-headline
+  @include heading(1.5em, .1em)
+  margin-top: 10px
+  margin-bottom: 20px
+
+// PROJECTS
 
 .projects
   display: flex
+  padding-top: 30px
 
 .project-thumbnail
   position: relative
   display: flex
   margin-right: 30px
-  background-color: #ddd
+  background-color: $gray
   height: 200px
   min-width: 300px
   box-shadow: 0px 5px 10px transparentize($black, .4)
@@ -197,22 +232,25 @@ nav
     font-size: 1.2em
     text-transform: uppercase
     transition: all 200ms ease-in-out
+
     hr
       width: 80%
       border-color: $gray
       margin: 25px 0
     div
+      @extend %josefin
       padding: 5px
       border: 1px solid $comp-light
-      +transparent-bg(.1)
+      +transparent-bg(.2)
       letter-spacing: 0.2em
       a
         text-decoration: none
         color: $white
-        &.hover
-          color: blue
-    &.hover
-      opacity: 1
+        font-weight: normal
+        transition: all 200ms
+        &:hover
+          color: $gray
+
 
 
     &:hover
@@ -237,11 +275,10 @@ nav
 
 
 .project-title
-  font-size: 1.1em
+  @include heading
   margin-top: 10px
   margin-bottom: 20px
-  color: $black
-  text-transform: uppercase
+
 
 
 
@@ -281,26 +318,48 @@ nav
 
 .blog
   display: flex
+  padding-top: 30px
 
 .blog-container
   display: flex
-  flex-direction: column
-  align-items: center
-  align-content: center
-  margin-bottom: 60px
 
-.blog-name
-  font-weight: bold
-  margin: 10px 0
+  margin-bottom: 30px
+
 
 .blog-summary
-  margin: 0 150px
+  max-width: 30%
+
+.post-container
+  margin: 0 30px 0 30px
+  background: linear-gradient($white, transparentize($gray, .5))
+  color: $black
+  padding: 25px
+  box-shadow: 0px 4px 8px transparentize($black, .4)
+  border: 1px solid $gray
+
+.latest-post
+  color: transparentize($black, .1)
+  font-size: .95em
+  text-transform: uppercase
+  letter-spacing: 0.1em
+
+.post-headline
+  @include heading
+  margin-top: 15px
+  margin-bottom: 5px
+
+.post-date
+  color: transparentize($black, .2)
+  font-size: .75em
+  text-transform: uppercase
+  letter-spacing: 0.1em
+  margin-bottom: 15px
 
 // CONTACT
 
 .contact
-  margin-bottom: 100px
   display: flex
+  padding-top: 30px
 
 .contact-container
   position: relative
@@ -309,26 +368,60 @@ nav
   flex-direction: column
   align-items: center
   align-content: center
-  h3
-    margin-bottom: 30px
+
+
+.contact-intro
+  font-size: 1.1em
+  margin-right: 5em
+  margin-bottom: 2em
+
+.email-container
+  display: flex
+  flex-grow: 1
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  margin-right: 4.5em
+  padding: 1em
+  background-color: $gray
+  border-radius: 100%
+  width: 10em
+  height: 10em
+  border: 3px solid $gray
+  box-shadow: 0px 4px 8px transparentize($black, .4)
+  transition: all 100ms ease-in-out
+  cursor: pointer
+  &:hover
+    background-color: transparentize($base-light, .1)
+    border: 3px solid $comp-light
+    box-shadow: 0px 2px 4px transparentize($black, .4)
+    .fa-envelope-o
+      color: $gray
+    .email-me
+      color: $gray
+      background-color: transparentize($comp-dark, .6)
+      border: 1px solid $comp-light
+
+
 
 .fa-envelope-o
-  color: $base-dark
+  color: $base-light
 
-.social-icons
-  display: flex
-  margin: 50px
-  width: 30%
-  justify-content: center
-  a
-    color: $base-dark
+  margin-bottom: .2em
 
-.circle-border
-  padding: 10px
-  border: 3px solid $base-light
-  +transparent-bg(.2)
-  border-radius: 100%
-  margin: 15px
+
+.email-me
+
+  font-size: 1.2em
+  font-weight: bold
+  padding: .1em
+  border: 1px solid $gray
+  +heading
+
+
+
+
+
 
 .contact-overlay
   position: absolute
@@ -336,26 +429,133 @@ nav
   bottom: 0
   left: 0
   right: 0
-  //background-color: transparentize(pink, .1)
-  opacity: 1
+  opacity: 0
+  background-color: $white
   display: flex
   flex-direction: column
+  justify-content: center
+  align-items: center
+  z-index: 1
+  transition: all 300ms ease-in-out
+  pointer-events: none
+  margin-bottom: -10px
+  &.is-open
+    opacity: 1
+    pointer-events: auto
+    .contact-modal
+      transform: translate(0px, 0px)
 
 .contact-modal
+  transition: all 300ms ease-in-out
+  transform: translate(0px, 150px)
+  display: flex
+  width: 100%
+  margin-right: 5em
+  position: relative
+
   form
     display: flex
     flex-direction: column
-    margin: 0 10%
+    align-items: center
+    margin: 0 10em
+    width: 100%
+    background-color: $white
+
+    .close-btn
+      position: absolute
+      top: -1.3em
+      right: 8.75em
+      color: $black
+      transition: all 200ms cubic-bezier(0.68, -0.55, 0.27, 1.55)
+      cursor: pointer
+      &:hover
+        transform: scale(1.2)
+
+
+    #top-line
+      display: flex
+      width: 100%
+      margin-bottom: .5em
+      justify-content: space-between
+
+    input
+      &[type="text"]
+        color: black
+        padding: .5em
+        width: 50%
+        &[id="Name"]
+          margin-right: .5em
+
+      &[type="submit"]
+        width: 50%
+        margin: 0 auto
+
+    #bottom-line
+      width: 100%
+      display: flex
+      justify-content: center
+      textarea
+        width: 100%
+        padding: .5em
+        margin-bottom: .5em
+
+
 
 
 //FOOTER
 
+
+
 .footer
-  width: auto
-  height: 25px
-  background-color: $base-light
-  color: $white
+  width: 100%
+  margin-top: 2em
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-self: flex-end
+
+
+  .bottom-bar
+    width: auto
+    height: 2.5em
+    background-color: $base-light
+    color: $white
+    letter-spacing: .2em
+    display: flex
+    justify-content: center
+    margin-top: 1em
+    div
+      display: flex
+      align-items: center
+
+
+
+
+.social-icons
   display: flex
   justify-content: center
-  align-items: center
-  letter-spacing: .2em
+  bottom: 3.5em
+  i
+    color: $black
+    text-shadow: 0px 2px 3px transparentize($black, .3)
+    padding: .4em
+    background-color: $white
+    border-radius: 100%
+    margin: .7em
+    margin-bottom: 0
+    position: relative
+    &[id="github"]
+      &:hover
+        background-color: transparentize($black, .3)
+        color: $white
+        animation: bounceIn 200ms ease-in-out
+    &[id="linkedin"]
+      &:hover
+        background-color: transparentize(#007BB6, .5)
+        color: $white
+        animation: bounceIn 200ms ease-in-out
+    &[id="twitter"]
+      &:hover
+        background-color: transparentize(#00ABF1, .5)
+        color: $white
+        animation: bounceIn 200ms
