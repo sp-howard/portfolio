@@ -127,9 +127,10 @@ nav {
 .about {
   display: flex;
   flex-flow: row;
-  height: 300px;
+  height: auto;
   margin-top: 60px;
-  padding-top: 30px; }
+  padding-top: 30px;
+  margin-bottom: 4em; }
   .about .about-pic {
     margin: 0 30px 0 30px;
     box-shadow: 0px 5px 10px rgba(51, 54, 56, 0.6);
@@ -152,6 +153,10 @@ nav {
   letter-spacing: 0.1em;
   margin-top: 10px;
   margin-bottom: 20px; }
+
+.about-bio {
+  margin-left: 2em;
+  margin-right: 2em; }
 
 .projects {
   display: flex;
@@ -214,7 +219,7 @@ nav {
 
 .project-container {
   display: flex;
-  margin: 0 30px 60px 10px; }
+  margin: 0 30px 4em 10px; }
 
 .project-title {
   font-size: 1.25em;
@@ -258,7 +263,9 @@ nav {
 
 .blog {
   display: flex;
-  padding-top: 30px; }
+  padding-top: 30px;
+  margin-top: 2em;
+  margin-bottom: 3em; }
 
 .blog-container {
   display: flex;
@@ -311,7 +318,7 @@ nav {
 
 .contact-intro {
   font-size: 1.1em;
-  margin-right: 5em;
+  margin-right: 4.5em;
   margin-bottom: 2em; }
 
 .email-container {
@@ -426,7 +433,7 @@ nav {
 
 .footer {
   width: 100%;
-  margin-top: 2em;
+  margin-top: 3em;
   display: flex;
   flex-direction: column;
   justify-content: center;

@@ -102,7 +102,6 @@ body
           font-weight: 100
           transform: rotate(-45deg)
 
-
       h1
         margin-bottom: -5px
         font-size: 3.8em
@@ -136,8 +135,6 @@ nav
     align-items: center
     justify-content: space-around
     li
-
-
       a
         font-weight: 100
         font-style: normal
@@ -174,9 +171,10 @@ nav
 .about
   display: flex
   flex-flow: row
-  height: 300px
+  height: auto
   margin-top: 60px
   padding-top: 30px
+  margin-bottom: 4em
 
   .about-pic
     margin: 0 30px 0 30px
@@ -185,11 +183,9 @@ nav
     min-width: 250px
     max-height: 250px
     overflow: hidden
-
     img
       height: 250px
       width: 250px
-
 
   .vertical-content-container
     display: flex
@@ -199,6 +195,9 @@ nav
   @include heading(1.5em, .1em)
   margin-top: 10px
   margin-bottom: 20px
+.about-bio
+  margin-left: 2em
+  margin-right: 2em
 
 // PROJECTS
 
@@ -250,9 +249,6 @@ nav
         transition: all 200ms
         &:hover
           color: $gray
-
-
-
     &:hover
       opacity: 1
 
@@ -271,16 +267,12 @@ nav
 
 .project-container
   display: flex
-  margin: 0 30px 60px 10px
-
+  margin: 0 30px 4em 10px
 
 .project-title
   @include heading
   margin-top: 10px
   margin-bottom: 20px
-
-
-
 
 .project-description-block
   display: flex
@@ -319,12 +311,12 @@ nav
 .blog
   display: flex
   padding-top: 30px
+  margin-top: 2em
+  margin-bottom: 3em
 
 .blog-container
   display: flex
-
   margin-bottom: 30px
-
 
 .blog-summary
   max-width: 30%
@@ -369,10 +361,9 @@ nav
   align-items: center
   align-content: center
 
-
 .contact-intro
   font-size: 1.1em
-  margin-right: 5em
+  margin-right: 4.5em
   margin-bottom: 2em
 
 .email-container
@@ -402,13 +393,10 @@ nav
       background-color: transparentize($comp-dark, .6)
       border: 1px solid $comp-light
 
-
-
 .fa-envelope-o
   color: $base-light
 
   margin-bottom: .2em
-
 
 .email-me
 
@@ -417,11 +405,6 @@ nav
   padding: .1em
   border: 1px solid $gray
   +heading
-
-
-
-
-
 
 .contact-overlay
   position: absolute
@@ -471,7 +454,6 @@ nav
       &:hover
         transform: scale(1.2)
 
-
     #top-line
       display: flex
       width: 100%
@@ -499,21 +481,15 @@ nav
         padding: .5em
         margin-bottom: .5em
 
-
-
-
 //FOOTER
-
-
 
 .footer
   width: 100%
-  margin-top: 2em
+  margin-top: 3em
   display: flex
   flex-direction: column
   justify-content: center
   align-self: flex-end
-
 
   .bottom-bar
     width: auto
@@ -527,9 +503,6 @@ nav
     div
       display: flex
       align-items: center
-
-
-
 
 .social-icons
   display: flex
